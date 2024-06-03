@@ -35,7 +35,7 @@ struct ProductView: View {
                 Text("Sustainability")
                     .font(.headline)
                 ForEach(product.sustainability, id: \.self) { data in
-                    HStack(spacing: 5) {
+                    HStack(spacing: 10) {
                         Text("-")
                         Text(data)
                             .font(.callout)

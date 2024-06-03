@@ -10,6 +10,7 @@ import Firebase
 
 class AuthViewModel: ObservableObject {
     
+    @Published var user: User = User(name: "", surname: "", isPrivate: true)
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
@@ -46,7 +47,13 @@ class AuthViewModel: ObservableObject {
             if let error = error {
                 self.errorMessage = "Failed to register: \(error.localizedDescription)"
             } else {
-                Storage.shared.setActive(true)
+                do {
+                    let db = Firestore.firestore()
+                    try db.collection("users").document(Auth.auth().currentUser?.uid ?? "").setData(from: self.user)
+                    Storage.shared.setActive(true)
+                } catch let error {
+                  print("Error writing city to Firestore: \(error)")
+                }
                 self.errorMessage = "User registered successfully"
             }
         }

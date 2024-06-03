@@ -29,6 +29,9 @@
 		A95F812D2C0DA48C00038CD1 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F812C2C0DA48C00038CD1 /* MoreView.swift */; };
 		A95F81302C0DA60600038CD1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F812F2C0DA60600038CD1 /* SettingsView.swift */; };
 		A95F81322C0DAB1700038CD1 /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F81312C0DAB1700038CD1 /* MoreViewModel.swift */; };
+		A95F81342C0DB66200038CD1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F81332C0DB66200038CD1 /* User.swift */; };
+		A95F81372C0DBA8D00038CD1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F81362C0DBA8D00038CD1 /* ProfileView.swift */; };
+		A95F81392C0DBA9F00038CD1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F81382C0DBA9F00038CD1 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		A95F812C2C0DA48C00038CD1 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		A95F812F2C0DA60600038CD1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A95F81312C0DAB1700038CD1 /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
+		A95F81332C0DB66200038CD1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A95F81362C0DBA8D00038CD1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A95F81382C0DBA9F00038CD1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 		A95F81162C0D938800038CD1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A95F81352C0DBA7E00038CD1 /* Profile */,
 				A95F812E2C0DA5D300038CD1 /* Settings */,
 				A95F812B2C0DA48300038CD1 /* More */,
 				A95F81262C0DA1DB00038CD1 /* Product */,
@@ -167,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				A95F81212C0D967000038CD1 /* Product.swift */,
+				A95F81332C0DB66200038CD1 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +203,15 @@
 				A95F812F2C0DA60600038CD1 /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		A95F81352C0DBA7E00038CD1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A95F81362C0DBA8D00038CD1 /* ProfileView.swift */,
+				A95F81382C0DBA9F00038CD1 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,12 +299,15 @@
 				A95F811F2C0D957D00038CD1 /* HomeViewModel.swift in Sources */,
 				A95F812A2C0DA1F200038CD1 /* ProductViewModel.swift in Sources */,
 				A95F81322C0DAB1700038CD1 /* MoreViewModel.swift in Sources */,
+				A95F81342C0DB66200038CD1 /* User.swift in Sources */,
 				A95F812D2C0DA48C00038CD1 /* MoreView.swift in Sources */,
 				A95F81122C0D8F8E00038CD1 /* AuthViewModel.swift in Sources */,
 				A95F81072C0D8E7100038CD1 /* AppDelegate.swift in Sources */,
 				A95F80F82C0D8C0A00038CD1 /* HomeView.swift in Sources */,
+				A95F81372C0DBA8D00038CD1 /* ProfileView.swift in Sources */,
 				A95F81302C0DA60600038CD1 /* SettingsView.swift in Sources */,
 				A95F81192C0D93A800038CD1 /* SignUpView.swift in Sources */,
+				A95F81392C0DBA9F00038CD1 /* ProfileViewModel.swift in Sources */,
 				A95F80F62C0D8C0A00038CD1 /* GreenFootprintApp.swift in Sources */,
 				A95F81282C0DA1E800038CD1 /* ProductView.swift in Sources */,
 				A95F81222C0D967000038CD1 /* Product.swift in Sources */,

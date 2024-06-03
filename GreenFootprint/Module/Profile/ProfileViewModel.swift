@@ -1,5 +1,5 @@
 //
-//  MoreViewModel.swift
+//  ProfileViewModel.swift
 //  GreenFootprint
 //
 //  Created by Eldiiar on 3/6/24.
@@ -7,19 +7,11 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
-class MoreViewModel: ObservableObject {
+class ProfileViewModel: ObservableObject {
     
     @Published var user: User = User(name: "", surname: "", isPrivate: true)
-    
-    func logout() {
-        do {
-            try Auth.auth().signOut()
-            Storage.shared.setActive(false)
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
-        }
-    }
     
     func getProfile() {
         let db = Firestore.firestore()

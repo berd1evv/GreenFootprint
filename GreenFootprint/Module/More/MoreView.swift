@@ -16,6 +16,11 @@ struct MoreView: View {
         VStack {
             List {
                 NavigationLink {
+                    ProfileView()
+                } label: {
+                    Text("Profile")
+                }
+                NavigationLink {
                     SettingsView()
                 } label: {
                     Text("Settings")

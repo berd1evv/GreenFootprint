@@ -1,5 +1,5 @@
 //
-//  SignUpView.swift
+//  ProfileView.swift
 //  GreenFootprint
 //
 //  Created by Eldiiar on 3/6/24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SignUpView: View {
-    @StateObject var viewModel: AuthViewModel = AuthViewModel()
+struct ProfileView: View {
+    @StateObject var viewModel: ProfileViewModel = ProfileViewModel()
     
     var body: some View {
         VStack {
@@ -22,26 +22,20 @@ struct SignUpView: View {
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                TextField("Email*", text: $viewModel.email)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                SecureField("Password*", text: $viewModel.password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                SecureField("Confirm Password*", text: $viewModel.confirmPassword)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             
             Button {
-                viewModel.register()
+                viewModel.changeProfile {
+                    print("Success")
+                }
             } label: {
-                Text("SignUp")
+                Text("Save")
             }
             .buttonStyle(.borderedProminent)
         }
         .padding()
+        .onAppear {
+            viewModel.getProfile()
+        }
     }
 }

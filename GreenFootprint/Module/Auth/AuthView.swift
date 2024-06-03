@@ -15,12 +15,14 @@ struct AuthView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                TextField("Email", text: $viewModel.email)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                SecureField("Password", text: $viewModel.password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Form {
+                    TextField("Email", text: $viewModel.email)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    SecureField("Password", text: $viewModel.password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
                 
                 Button {
                     viewModel.login()

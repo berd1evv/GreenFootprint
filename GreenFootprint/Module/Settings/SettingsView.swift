@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var isSecure: Bool = false
+    @StateObject var viewModel: MoreViewModel = MoreViewModel()
+
     var body: some View {
         VStack {
             List {
-                Toggle("User privacy", isOn: $isSecure)
+                Toggle("User privacy", isOn: $viewModel.user.isPrivate)
             }
         }
         .navigationTitle("Settings")
+        .onAppear {
+            viewModel.getProfile()
+        }
+        .onChange(of: viewModel.user.isPrivate) {
+            viewModel.changeProfile {}
+        }
     }
 }
