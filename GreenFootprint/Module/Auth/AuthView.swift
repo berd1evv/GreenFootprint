@@ -21,6 +21,10 @@ struct AuthView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 SecureField("Password", text: $viewModel.password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .foregroundStyle(.red)
+                }
                 
                 Button {
                     viewModel.login()
