@@ -32,6 +32,7 @@
 		A95F81342C0DB66200038CD1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F81332C0DB66200038CD1 /* User.swift */; };
 		A95F81372C0DBA8D00038CD1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F81362C0DBA8D00038CD1 /* ProfileView.swift */; };
 		A95F81392C0DBA9F00038CD1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F81382C0DBA9F00038CD1 /* ProfileViewModel.swift */; };
+		A95F813B2C0DC22800038CD1 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95F813A2C0DC22800038CD1 /* PreferencesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		A95F81332C0DB66200038CD1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A95F81362C0DBA8D00038CD1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A95F81382C0DBA9F00038CD1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A95F813A2C0DC22800038CD1 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				A95F81182C0D93A800038CD1 /* SignUpView.swift */,
+				A95F813A2C0DC22800038CD1 /* PreferencesView.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95F813B2C0DC22800038CD1 /* PreferencesView.swift in Sources */,
 				A95F811C2C0D94CE00038CD1 /* ResetView.swift in Sources */,
 				A95F811F2C0D957D00038CD1 /* HomeViewModel.swift in Sources */,
 				A95F812A2C0DA1F200038CD1 /* ProductViewModel.swift in Sources */,

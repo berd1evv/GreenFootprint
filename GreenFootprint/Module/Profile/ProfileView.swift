@@ -12,17 +12,15 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
-            Form {
-                TextField("Name", text: $viewModel.user.name)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                TextField("Surname", text: $viewModel.user.surname)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
+            TextField("Name", text: $viewModel.user.name)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            TextField("Surname", text: $viewModel.user.surname)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button {
                 viewModel.changeProfile {
